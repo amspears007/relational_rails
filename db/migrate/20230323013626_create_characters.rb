@@ -5,7 +5,7 @@ class CreateCharacters < ActiveRecord::Migration[5.2]
       t.string :disposition
       t.boolean :has_job
       t.string :number_of_children
-      t.reference :sitcom
+      t.references :sitcom, foreign_key: true
 
       t.timestamps
     end
