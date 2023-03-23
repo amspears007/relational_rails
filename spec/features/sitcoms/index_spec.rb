@@ -9,10 +9,8 @@ RSpec.describe '/sitcoms (Sitcom Index Page)', type: :feature do
     it 'I see the name of each sitcom' do
       visit '/sitcoms'
 save_and_open_page
-
       expect(page).to have_content(schitts_creek.name)
       expect(page).to have_content(arrested_development.name)
-      
     end
   end
 end
