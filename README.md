@@ -16,7 +16,7 @@ CRUD
 
 User Story 1, Parent Index 
 
-For each parent table
+For each Sitcom table
 As a visitor
 When I visit '/parents'
 Then I see the name of each parent record in the system
