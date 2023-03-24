@@ -11,7 +11,7 @@ RSpec.describe '/characters(Character Index Page)', type: :feature do
     let!(:stevie_budd) {Character.create!(name: "Stevie Budd", disposition: 'sardonic', has_job: true, number_of_children: 0,sitcom: schitts_creek)}
     let!(:lucille_bluth) {Character.create!(name: "Lucille Bluth", disposition: 'ruthless alcoholic', has_job: false, number_of_children: 4,sitcom: arrested_development)}
     let!(:george_michael) {Character.create!(name: "George Michael Bluth", disposition: 'straight_man', has_job: true, number_of_children: 0, sitcom: arrested_development)}
-    let!(:tobias) {Character.create!(name: "Tobias Funke", disposition: 'never-nude', has_job: true, number_of_children: 1, sitcom: arrested_development)}
+    let!(:tobias) {Character.create!(name: "Tobias Funke", disposition: 'never-nude', has_job: false, number_of_children: 1, sitcom: arrested_development)}
 
     it 'I see the attributes of each character' do
       visit '/characters'
