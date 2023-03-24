@@ -4,6 +4,6 @@ class SitcomsController < ApplicationController
   end
 
   def show
-    
+    @sitcom = Sitcom.find(params[:id])
   end
 end

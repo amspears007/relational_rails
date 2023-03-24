@@ -7,13 +7,15 @@ RSpec.describe 'the sitcoms show page' do
     let!(:arrested_development) {Sitcom.create!(name: "Arrested Development", streaming: true, number_of_seasons: 5, year_end: 2019)}
 
     it 'I see the sitcom with that id and its attributes' do
-      visit "/sitcoms/:id"
+      visit "/sitcoms/#{schitts_creek.id}"
+      save_and_open_page
 
+      
       expect(page).to have_content(schitts_creek.name)
       expect(page).to have_content(schitts_creek.streaming)
       expect(page).to have_content(schitts_creek.number_of_seasons)
       expect(page).to have_content(schitts_creek.year_end)
-      
+
       expect(page).to_not have_content(arrested_development.name)
     end
   end
