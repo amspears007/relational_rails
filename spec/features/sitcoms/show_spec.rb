@@ -10,7 +10,6 @@ RSpec.describe 'the sitcoms show page' do
       visit "/sitcoms/#{schitts_creek.id}"
       save_and_open_page
 
-      
       expect(page).to have_content(schitts_creek.name)
       expect(page).to have_content(schitts_creek.streaming)
       expect(page).to have_content(schitts_creek.number_of_seasons)
