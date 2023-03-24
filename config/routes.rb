@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   #CRUD Verbs: get,post,patch/put, delete
   #Actions: index, show, new, create, edit, update,destroy
   get "/sitcoms", to: "sitcoms#index"
+  get "/sitcoms/:id", to: "sitcoms#show"
   get "/characters", to: "characters#index"
 end
