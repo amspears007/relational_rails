@@ -4,7 +4,6 @@ class CharactersController < ApplicationController
   end
 
   def show
-    # require 'pry'; binding.pry
     @character = Character.find(params[:id])
   end
 end
