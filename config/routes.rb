@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get "/sitcoms", to: "sitcoms#index"
   get "/sitcoms/:id", to: "sitcoms#show"
   get "/characters", to: "characters#index"
+  get "/characters/:id", to: "characters#show"
+
 end
