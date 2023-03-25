@@ -13,6 +13,7 @@ RSpec.describe "/sitcoms/:sitcom_id/characters", type: :feature do
     let!(:tobias) {Character.create!(name: "Tobias Funke", disposition: 'never-nude', has_job: false, number_of_children: 1, sitcom: arrested_development)}
     it 'I see each character name associated with that sitcom' do
       visit "/sitcoms/#{schitts_creek.id}/characters"
+save_and_open_page
 
       expect(page).to have_content(david_rose.name)
       expect(page).to have_content(moira_rose.name)
@@ -20,7 +21,7 @@ RSpec.describe "/sitcoms/:sitcom_id/characters", type: :feature do
       expect(page).to_not have_content(george_michael.name)
     end
 
-    xit 'I see each character disposition associated with that sitcom' do
+    it 'I see each character disposition associated with that sitcom' do
       visit "/sitcoms/#{schitts_creek.id}/characters"
 
       expect(page).to have_content(david_rose.disposition)
@@ -29,7 +30,7 @@ RSpec.describe "/sitcoms/:sitcom_id/characters", type: :feature do
       expect(page).to_not have_content(george_michael.disposition)
     end
 
-    xit 'I see how many children each character has' do
+    it 'I see how many children each character has' do
       visit "/sitcoms/#{schitts_creek.id}/characters"
 
       expect(page).to have_content(david_rose.number_of_children)
