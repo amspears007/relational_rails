@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get "/sitcoms/:id", to: "sitcoms#show"
   get "/characters", to: "characters#index"
   get "/characters/:id", to: "characters#show"
-
+  get "/sitcoms/:sitcom_id/characters", to: "sitcom_characters#index"
 end
