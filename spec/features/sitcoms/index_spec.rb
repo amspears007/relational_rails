@@ -13,10 +13,15 @@ RSpec.describe '/sitcoms (Sitcom Index Page)', type: :feature do
 save_and_open_page
       expect(page).to have_content(schitts_creek.name)
       expect(page).to have_content(arrested_development.name)
+      expect(page).to have_content(modern_family.name)
     end
 
     it 'I see that records are ordered by most recently created first' do
       #User Story 6
+      visit '/sitcoms'
+
+      expect(schitts_creek.name).to appear_before(modern_family.name)
+      expect(arrested_development.name).to appear_before(modern_family.name)
     end
   end
 end

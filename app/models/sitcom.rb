@@ -3,7 +3,6 @@ class Sitcom < ApplicationRecord
 
 
   def self.sort
-    # require 'pry'; binding.pry
     order(:created_at)
   end
 end
