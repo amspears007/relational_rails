@@ -1,4 +1,6 @@
-<% @sitcom_characters.each do |character| %>
+<%= link_to "List of all Characters", '/characters'%>
+
+<% @sitcom.characters.each do |character| %>
 
   <p><%= character.name %></p>
   <p><%= character.disposition %></p>
