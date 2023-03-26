@@ -12,6 +12,10 @@ RSpec.describe Sitcom, type: :model do
 
     expect(Sitcom.sort).to eq([schitts_creek, arrested_development, modern_family])
   end
+
+  it 'can counts number of characters in each sitcom' do
+    
+  end
   
 
 

@@ -17,5 +17,13 @@ RSpec.describe 'the sitcoms show page' do
 
       expect(page).to_not have_content(arrested_development.name)
     end
+
+    it 'I see a count of the number of characters associated with this sitcom' do
+      visit "/sitcoms/#{schitts_creek.id}"
+
+      
+      expect(page.to have_content(schitts_creek.char_count))
+      expect(schitts_creek.char_count).to eq(3)
+    end
   end
 end
