@@ -5,4 +5,8 @@ class Sitcom < ApplicationRecord
   def self.sort
     order(:created_at)
   end
+
+  def char_count
+    characters.count
+  end
 end
