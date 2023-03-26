@@ -28,7 +28,7 @@ save_and_open_page
       #User story 8
       it 'I see a link at the top of the page that takes me to the Characters Index' do
       visit '/sitcoms'
-      save_and_open_page
+      # save_and_open_page
 
 
       click_link("List of all Characters")
