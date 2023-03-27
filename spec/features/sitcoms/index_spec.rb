@@ -10,7 +10,7 @@ RSpec.describe '/sitcoms (Sitcom Index Page)', type: :feature do
 
     it 'I see the name of each sitcom' do
       visit '/sitcoms'
-save_and_open_page
+# save_and_open_page
       expect(page).to have_content(schitts_creek.name)
       expect(page).to have_content(arrested_development.name)
       expect(page).to have_content(modern_family.name)
@@ -24,16 +24,14 @@ save_and_open_page
       expect(arrested_development.name).to appear_before(modern_family.name)
     end
 
-    describe 'As a visitor I visit any page on the site' do
-      #User story 8
-      it 'I see a link at the top of the page that takes me to the Characters Index' do
-      visit '/sitcoms'
-      # save_and_open_page
+  describe 'As a visitor I visit any page on the site' do
+   #User story 9
+    it 'I see a link at the top of the page that takes me to the Sitcoms Index' do
+    visit '/sitcoms'
+    #save_and_open_page
+    click_link("List of all Sitcoms")
 
-
-      click_link("List of all Characters")
-
-      expect(current_path).to eq('/characters')
+    expect(current_path).to eq('/sitcoms')
       end
     end
   end

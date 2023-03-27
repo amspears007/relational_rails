@@ -40,4 +40,18 @@ RSpec.describe '/characters(Character Index Page)', type: :feature do
       expect(page).to have_content(phil.disposition)
     end
   end
+
+    describe 'As a visitor I visit any page on the site' do
+      #User story 8
+      it 'I see a link at the top of the page that takes me to the Characters Index' do
+      visit '/sitcoms'
+      # save_and_open_page
+
+
+      click_link("List of all Characters")
+
+      expect(current_path).to eq('/characters')
+      
+    end
+  end
 end

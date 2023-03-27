@@ -1,4 +1,5 @@
-<%= link_to "List of all Characters", '/characters'%>
+<%= link_to "List of all Characters", '/characters' %>
+<%= link_to "List of all Sitcoms," '/sitcoms' %>
 <% @sitcoms.each do |sitcom| %>
   <h3><%= sitcom.name %> <%=sitcom.created_at %><h3>
 <% end %>
