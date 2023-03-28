@@ -1,5 +1,12 @@
 
+
+  
   <p><%= @sitcom.name %><p>
   <p><%= @sitcom.streaming %><p> 
   <p><%= @sitcom.number_of_seasons %><p>
   <p><%= @sitcom.year_end %><p>
+  <p> Number of characters: <%= @sitcom.char_count %><p>
+
+<p><%= link_to "Characters Table Page", '/sitcoms/#{schitts_creek.id}/characters' %><p>
+
+
