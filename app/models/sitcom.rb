@@ -1,8 +1,8 @@
 class Sitcom < ApplicationRecord
-  has_many :characters
+  has_many :characters, dependent: :destroy
 
 
-  def self.sort
+  def self.sort_by_created_at
     # require 'pry'; binding.pry
     order(:created_at)
   end

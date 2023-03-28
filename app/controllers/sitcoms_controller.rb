@@ -1,6 +1,6 @@
 class SitcomsController < ApplicationController
   def index
-    @sitcoms = Sitcom.sort
+    @sitcoms = Sitcom.sort_by_created_at
   end
 
   def show

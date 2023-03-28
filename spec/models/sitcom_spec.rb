@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Sitcom, type: :model do
+  before do
+    Sitcom.destroy_all
+  end
   describe 'relationships' do
     it { should have_many :characters }
   end
@@ -11,7 +14,7 @@ RSpec.describe Sitcom, type: :model do
     modern_family = Sitcom.create!(name: "Modern Family", streaming: true, number_of_seasons:11, year_end: 2020)
 
     
-    expect(Sitcom.sort).to eq([schitts_creek, arrested_development, modern_family])
+    expect(Sitcom.sort_by_created_at).to eq([schitts_creek, arrested_development, modern_family])
   end
 
   it 'can counts number of characters in each sitcom' do
@@ -22,7 +25,4 @@ RSpec.describe Sitcom, type: :model do
 
     expect(arrested_development.char_count).to eq(3)
   end
-  
-
-
 end
