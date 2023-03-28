@@ -37,6 +37,15 @@ RSpec.describe 'the sitcoms show page' do
       expect(page).to have_content(schitts_creek.char_count)
       expect(schitts_creek.char_count).to eq(3)
     end
- 
+
+    it 'I see a link to take me to that sitcoms characters_table_name page' do
+      #User story 10
+      visit "/sitcoms/#{schitts_creek.id}"
+
+    #save_and_open_page
+    click_link("List of all Sitcoms")
+
+    expect(current_path).to eq('/sitcoms')
+    end
   end
 end
